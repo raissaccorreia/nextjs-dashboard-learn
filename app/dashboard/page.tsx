@@ -4,9 +4,14 @@ import {
   fetchRevenue,
 } from "@/app/lib/data";
 import { lusitana } from "@/app/ui/fonts";
+import { Metadata } from "next";
 import { Card } from "../ui/dashboard/cards";
 import LatestInvoices from "../ui/dashboard/latest-invoices";
 import RevenueChart from "../ui/dashboard/revenue-chart";
+
+export const metadata: Metadata = {
+  title: "Invoices | Acme Dashboard",
+};
 
 export default async function Page() {
   const revenue = await fetchRevenue();
